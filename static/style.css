@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Verdana', sans-serif;
+    background: #6e42c1 url("/static/bg-pattern.png") no-repeat center center;
+    background-size: cover;
+}
+
+.gameboy-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.container {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    text-align: center;
+    border: 3px solid #444;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    text-shadow: 1px 1px #fff;
+}
+
+select {
+    background-color: #fffaf0;
+    border: 3px solid #5e4b8b;
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    box-shadow: inset -2px -2px 0 #c5b4e3, 2px 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    appearance: none; /* Quitar flechita por defecto */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235e4b8b' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px 8px;
+    width: 100%;
+    max-width: 300px;
+    transition: border-color 0.2s ease;
+}
+
+select:focus {
+    border-color: #7a64c9;
+    outline: none;
+}
+
+.fight-btn {
+    background-color: #f08080;
+    border: 2px solid #c04040;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: inset -2px -2px 0 #d05050;
+    text-transform: uppercase;
+}
+
+.fight-btn:hover {
+    background-color: #e06666;
+}
+
+.pokemon-info img {
+    margin-top: 10px;
+    height: 120px;
+}
+
+.moves {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.move-box {
+    background-color: #d9edf7;
+    border: 2px solid #31708f;
+    color: #31708f;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    min-width: 80px;
+    text-align: center;
+    box-shadow: inset -2px -2px 0 rgba(0,0,0,0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    height: 75px; /* o el tamaño que se ajuste mejor */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Marco exterior negro simulando Game Boy Advance */
+.gba-frame {
+    border: 12px solid black;
+    border-radius: 35px;
+    background-color: #d3d3d3;
+    padding: 20px;
+    width: fit-content;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenedor del logo en la parte inferior */
+.gba-logo {
+    margin-top: 15px;
+    padding-top: 10px;
+}
+
+/* Estilo de la imagen del logo de GBA */
+.gba-logo img {
+    width: 160px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Envoltura para simular el marco más grueso abajo */
+.container-wrapper {
+    background-color: black;
+    padding: 12px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Contenedor principal modificado (sin bordes exteriores negros aquí) */
+.container {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    text-align: center;
+    border: 3px solid #444;
+    border-bottom: none; /* para que no interfiera con la franja inferior */
+}
+
+/* Franja inferior más gruesa simulando marco GBA */
+.gba-bottom {
+    background-color: black;
+    height: 60px;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Imagen del logo dentro de la franja */
+.gba-bottom img {
+    height: 140px;
+}

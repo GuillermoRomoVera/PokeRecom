@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recomendador Pokémon</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="gameboy-bg">
+        <div class="container-wrapper">
+            <div class="container">
+                <div class="header">
+                    <h2>Generador de</h2>
+                    <img src="{{ url_for('static', filename='logo.png') }}" alt="Pokemon img" class="logo-img">
+                </div>
+                <form method="POST">
+                    <label for="type">Selecciona un tipo:</label>
+                    <select name="type" id="type">
+                        {% for t in types %}
+                        <option value="{{ t }}">{{ t.capitalize() }}</option>
+                        {% endfor %}
+                    </select>
+                    <h2></h2>
+                    <button class="fight-btn" type="submit">Generar Pokémon</button>
+                </form>
+
+                {% if pokemon %}
+                <div class="pokemon-info">
+                    <h2>{{ pokemon.name }}</h2>
+                    <img src="{{ pokemon.sprite }}" alt="Pokemon Image">
+                    <p><strong>ID:</strong> {{ pokemon.id }}</p>
+
+                    <div class="moves">
+                        {% for move in pokemon.moves %}
+                        <div class="move-box">{{ move.capitalize() }}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Logo de Game Boy Advance en la parte inferior -->
+            <div class="gba-bottom">
+                <img src="{{ url_for('static', filename='gba-logo.png') }}" alt="Game Boy Advance Logo">
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
